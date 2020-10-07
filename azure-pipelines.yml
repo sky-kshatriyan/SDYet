@@ -24,7 +24,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: 'sdyet.csproj'
+    projects: 'sdtest/sdyet.csproj'
 
 # - task: VSBuild@1
 #   inputs:
