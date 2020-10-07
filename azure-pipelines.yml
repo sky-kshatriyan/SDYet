@@ -15,16 +15,17 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: NuGetToolInstaller@1
+# - task: NuGetToolInstaller@1
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+# - task: NuGetCommand@2
+#   inputs:
+#     restoreSolution: '$(solution)'
 
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: 'sdtest/sdyet.sln'
+    projects: 'sdtest/sdtest.sln'
+    workingDirectory: 'sdtest'
 
 # - task: VSBuild@1
 #   inputs:
